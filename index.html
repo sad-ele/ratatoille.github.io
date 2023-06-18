@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ratatoille Tech</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script>
+        function toggleButton()
+            {
+                var usermail = document.getElementById('user_email').value;
+                var password = document.getElementById('user_password').value;
+ 
+                if (usermail && password) {
+                    document.getElementById('login_button').disabled = false;
+                } else {
+                    document.getElementById('login_button').disabled = true;
+                }
+            }
+
+            function toggleButton2()
+            {
+                var username = document.getElementById('user_name_reg').value;
+                var usersurname = document.getElementById('user_surname_reg').value;
+                var usertel = document.getElementById('user_tel_reg').value;
+                var usermail = document.getElementById('user_email_reg').value;
+                var password1 = document.getElementById('user_pass_reg').value;
+                var password2 = document.getElementById('user_pass2_reg').value;
+ 
+                if (username && usersurname && usertel && usermail && password1 && password2) {
+                    document.getElementById('reg_button').disabled = false;
+                } else {
+                    document.getElementById('reg_button').disabled = true;
+                }
+            }
+
+        
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div id="header" class="header_top">
+                <nav class="nav">
+                    <div class="nav_logo">
+                        <h2 class="logo">
+                            <a href="index.html">The Ratatoille Tech</a>
+                        </h2>
+                    </div>
+                    <ul class="nav_list">
+                        <li><a href="index.html">Главная страница</a></li>
+                        <li><a href="#!">Как это работает</a></li>
+                        <li><a href="#!">Крысы</a></li>
+                        <li><a href="#!">Почему мы?</a></li>
+                        <li><a href="#!">Отзывы</a></li>
+                    </ul>
+                    <ul class="nav_login">
+                        <li><a href="#popup_signup" style="text-decoration: underline">Регистрация</a></li>
+                        <li><a href="#popup_login" class="btn">Вход</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header_row">
+            <div class="header_content">
+                <h1 class="header_title">Откройте двери в мир гастрономии с крысой-поваром </h1>
+                <div class="header_text"><p>Умные крысы во главе кулинарной революции: Закажите неповторимые кулинарные шедевры прямо к вам домой!</p></div>
+                <div class="header_text_reg">Зарегистрируйтесь, чтобы сделать заказ</div>
+                <a href="#popup_signup" class="header_registration_btn">Регистрация</a>
+                <div class="header_text_log">Или <a href="#popup_login" style="text-decoration: underline">войдите</a>, если у вас уже есть аккаунт</div>
+            </div>
+            <div class="header_img">
+                <img src="./img/fat rat.png" alt="image"> 
+            </div>
+        </div>
+        </div>
+    </header>
+    <div id="popup_login" class="popup">
+        <a href="#header" class="popup_area"></a>
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="#header" class="popup_close"><img src="img/close.png"></a>
+                <div class="popup_title"><h2 class="active">Вход</h2> <a href="#popup_signup">Регистрация</a></div>
+                <div class="popup_row">
+                <div class="login_form">
+                    <form class="login_form" action="login_main.html" method="post" enctype="multipart/form-data">
+                        <label for="user_email">Email</label>
+                        <input id="user_email" type="email" name="user_email" onchange="toggleButton()">
+
+                        <label for="user_password">Пароль</label>
+                        <input id="user_password" type="password" name="user_password" onchange="toggleButton()">
+
+                        <a href="#!" class="forgot_password" style="text-decoration: underline">Забыли пароль?</a>
+                        <button id="login_button" type="submit" class="login_button" disabled> Войти </button>
+                    </form>
+                </div>
+                <div><img src="img/Line.png"></div>
+                    <div class="popup_right">
+                        <div class="welcome">Добро пожаловать в
+                            The Ratatoille Tech </div>
+                        <div class="agreement_text">Нажимая на кнопку регистрации, вы соглашаетесь на обработку персональных данных</div>
+                        <div class="welcome_img">
+                            <img src="img/remi.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup_signup" class="popup">
+        <a href="#header" class="popup_area"></a>
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="#header" class="popup_close"><img src="img/close.png"></a>
+                <div class="popup_title"><a href="#popup_login">Вход</a> <h2 class="active">Регистрация</h2></div>
+                <div class="popup_row">
+                <div class="signup_form">
+                    <form class="signup_form" action="login_main.html" method="post" enctype="multipart/form-data">
+                        <label for="user_name">Имя</label>
+                        <input id="user_name_reg" type="text" name="user_name" value="" onchange="toggleButton2()">
+
+                        <label for="user_surname">Фамилия</label>
+                        <input id="user_surname_reg"type="text" name="user_surname" value="" onchange="toggleButton2()">
+
+                        <label for="user_phone">Номер телефона</label>
+                        <input id="user_tel_reg" type="tel" name="user_phone" value="" onchange="toggleButton2()">
+
+                        <label for="user_email">Email</label>
+                        <input id="user_email_reg" type="email" name="user_email" value="" onchange="toggleButton2()">
+
+                        <label for="user_password">Пароль</label>
+                        <input id="user_pass_reg" type="password" name="user_password" value="" onchange="toggleButton2()">
+
+                        <label for="user_password">Подтвердите пароль</label>
+                        <input id="user_pass2_reg" type="password" name="user_password" value="" onchange="toggleButton2()">
+
+                        <button id="reg_button" disabled type="submit" class="login_button">Регистрация</button>
+                    </form>
+                </div>
+                <div><img src="img/Line.png"></div>
+                    <div class="popup_right">
+                        <div class="welcome">Добро пожаловать в
+                            The Ratatoille Tech </div>
+                        <div class="agreement_text">Нажимая на кнопку регистрации, вы соглашаетесь на обработку персональных данных</div>
+                        <div class="welcome_img">
+                            <img src="img/remi.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

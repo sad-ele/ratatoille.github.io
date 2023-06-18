@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="./css/order.css">
+    <script></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div id="header" class="header_top">
+                <nav class="nav">
+                    <div class="nav_logo">
+                        <h2 class="logo">
+                            <a href="login_main.html">The Ratatoille Tech</a>
+                        </h2>
+                    </div>
+                    <ul class="nav_list">
+                        <li><a href="login_main.html">Главная страница</a></li>
+                        <li><a href="#!">Как это работает</a></li>
+                        <li><a href="#!">Крысы</a></li>
+                        <li><a href="#!">Почему мы?</a></li>
+                        <li><a href="#!">Отзывы</a></li>
+                    </ul>
+                    <ul class="nav_login">
+                        <li><a href="#!" class="btn">Личный кабинет</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="header_title">Оформление заказа</h1>
+    
+        <form id="order_form" class="order_form" action="order_confirm.html" method="post" enctype="multipart/form-data">
+        <div class="first_column">
+                <label for="city">Город</label><br>
+                <select class="default" name="city">
+                    <option value="">Выбрать</option>
+                    <option value="Kazan">Казань</option>
+                    <option value="Saint-Petersburg">Санкт-Петербург</option>
+                    <option value="Ufa">Уфа</option>
+                </select><br>
+
+                <label for="adress">Адрес</label><br>
+                <input type="text" name="adress" value=""><br>
+
+                <label for="delivery_date">Дата доставки</label><br>
+                <input class="default" type="date" name="delivery_date" value=""><br>
+
+                <label for="delivery_time">Время доставки</label><br>
+                <input class="default" type="time" name="delivery_time" value=""><br>
+
+                <label for="rat_class">Класс крысы</label><br>
+                <select class="default" name="rat_class">
+                    <option value="">Выбрать</option>
+                    <option value="normal">Обычная</option>
+                    <option value="unusual">Редкая</option>
+                    <option value="mythical">Мифическая</option>
+                    <option value="legendary">Легендарная</option>
+                </select><br>
+
+                <label for="rat_color">Цвет крысы</label><br>
+                <select class="default" name="rat_color">
+                    <option value="">Выбрать</option>
+                    <option value="white">Белая</option>
+                    <option value="grey">Серая</option>
+                    <option value="multicolor">Цветная</option>
+                    <option value="black">Черная</option>
+                </select><br>
+        </div>
+        <div class="second_column">
+                <label for="kitchen">Кухня</label>
+                <p><input class="check_input" type="checkbox" name="kitchen1" value="american"> Американская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen2" value="mexican"> Мексиканская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen3" value="italian"> Итальянская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen4" value="indian"> Индийская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen5" value="greek"> Греческая</p>
+                <p><input class="check_input" type="checkbox" name="kitchen6" value="asian"> Азиатская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen7" value="turkish"> Турецкая</p>
+                <p><input class="check_input" type="checkbox" name="kitchen8" value="russian"> Русская</p>
+
+                <div class="wish_container default"><label for="wishes">Ваши пожелания</label><br>
+                <textarea placeholder="Текст" class="wishes" name="wishes" cols="20" rows="5"></textarea>
+            </div>
+            </form>
+            <div class="cost">
+            <p>Примерная стоимость заказа: <b>50 монет</b></p>
+        
+        </div>
+    </div>
+    <button form="order_form" type="submit" class="btn_next">Далее</button>
+    </div>
+</body>
+</html>
