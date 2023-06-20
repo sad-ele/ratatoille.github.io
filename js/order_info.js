@@ -15,7 +15,7 @@ function check() {
 
     const order = {id, city, adress, del_date, del_time, rat_class, rat_color, kitchen, wishes};
     localStorage.setItem('order', JSON.stringify(order));
-    window.location.href = 'order_confirm.html';
+    window.location.href = '/order_confirm.html';
 }
 
 // alert(city);
