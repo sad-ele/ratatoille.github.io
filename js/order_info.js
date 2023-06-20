@@ -34,7 +34,7 @@ function load_order() {
     // alert(JSON.stringify(order));
     const orderEl = document.querySelector('.order_column');
     const html = `
-        <div><h2>№ Заказа</h2><p>${order.id}</p></div>
+        <div><h2>№ Заказа</h2><p>1</p></div>
         <div><h2>Состав заказа</h2><p>${order.rat_class}, ${order.rat_color} крыса. ${order.kitchen} кухня</p></div>
         <div><h2>Адрес доставки</h2><p>${order.city}, ${order.adress}</p></div>
         <div><h2>Дата и время доставки</h2><p>${order.del_date}, ${order.del_time}</p></div>
