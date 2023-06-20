@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order</title>
     <link rel="stylesheet" href="./css/order.css">
-    <script></script>
+    <script src="js/order_info.js"></script>
 </head>
 <body>
     <header class="header">
@@ -35,18 +35,18 @@
     <div class="container">
         <h1 class="header_title">Оформление заказа</h1>
     
-        <form id="order_form" class="order_form" action="order_confirm.html">
+        <form id="order_form" class="order_form" action="" method="post" enctype="multipart/form-data">
         <div class="first_column">
                 <label for="city">Город</label><br>
                 <select class="default" name="city">
                     <option value="">Выбрать</option>
-                    <option value="Kazan">Казань</option>
-                    <option value="Saint-Petersburg">Санкт-Петербург</option>
-                    <option value="Ufa">Уфа</option>
+                    <option value="Казань">Казань</option>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                    <option value="Уфа">Уфа</option>
                 </select><br>
 
                 <label for="adress">Адрес</label><br>
-                <input type="text" name="adress" value=""><br>
+                <input type="text" name="adress"><br>
 
                 <label for="delivery_date">Дата доставки</label><br>
                 <input class="default" type="date" name="delivery_date" value=""><br>
@@ -57,31 +57,31 @@
                 <label for="rat_class">Класс крысы</label><br>
                 <select class="default" name="rat_class">
                     <option value="">Выбрать</option>
-                    <option value="normal">Обычная</option>
-                    <option value="unusual">Редкая</option>
-                    <option value="mythical">Мифическая</option>
-                    <option value="legendary">Легендарная</option>
+                    <option value="Обычная">Обычная</option>
+                    <option value="Редкая">Редкая</option>
+                    <option value="Мифическая">Мифическая</option>
+                    <option value="Легендарная">Легендарная</option>
                 </select><br>
 
                 <label for="rat_color">Цвет крысы</label><br>
                 <select class="default" name="rat_color">
                     <option value="">Выбрать</option>
-                    <option value="white">Белая</option>
-                    <option value="grey">Серая</option>
-                    <option value="multicolor">Цветная</option>
-                    <option value="black">Черная</option>
+                    <option value="белая">Белая</option>
+                    <option value="серая">Серая</option>
+                    <option value="цветная">Цветная</option>
+                    <option value="черная">Черная</option>
                 </select><br>
         </div>
         <div class="second_column">
                 <label for="kitchen">Кухня</label>
-                <p><input class="check_input" type="checkbox" name="kitchen1" value="american"> Американская</p>
-                <p><input class="check_input" type="checkbox" name="kitchen2" value="mexican"> Мексиканская</p>
-                <p><input class="check_input" type="checkbox" name="kitchen3" value="italian"> Итальянская</p>
-                <p><input class="check_input" type="checkbox" name="kitchen4" value="indian"> Индийская</p>
-                <p><input class="check_input" type="checkbox" name="kitchen5" value="greek"> Греческая</p>
-                <p><input class="check_input" type="checkbox" name="kitchen6" value="asian"> Азиатская</p>
-                <p><input class="check_input" type="checkbox" name="kitchen7" value="turkish"> Турецкая</p>
-                <p><input class="check_input" type="checkbox" name="kitchen8" value="russian"> Русская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen" value="Американская"> Американская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen" value="Мексиканская"> Мексиканская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen" value="Итальянская"> Итальянская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen" value="Индийская"> Индийская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen" value="Греческая"> Греческая</p>
+                <p><input class="check_input" type="checkbox" name="kitchen" value="Азиатская"> Азиатская</p>
+                <p><input class="check_input" type="checkbox" name="kitchen" value="Турецкая"> Турецкая</p>
+                <p><input class="check_input" type="checkbox" name="kitchen" value="Русская"> Русская</p>
 
                 <div class="wish_container default"><label for="wishes">Ваши пожелания</label><br>
                 <textarea placeholder="Текст" class="wishes" name="wishes" cols="20" rows="5"></textarea>
@@ -92,7 +92,7 @@
         
         </div>
     </div>
-    <button form="order_form" class="btn_next">Далее</button>
+    <button form="order_form" type="submit" class="btn_next" onclick="check()">Далее</button>
     </div>
 </body>
 </html>
