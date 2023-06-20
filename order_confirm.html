@@ -7,9 +7,9 @@
     <title>Order confirmation</title>
     <link rel="stylesheet" href="./css/order.css">
     <link rel="stylesheet" href="./css/order_confirm.css">
-    <script></script>
+    <script src="js/order_info.js"></script>
 </head>
-<body>
+<body onload="load_order()">
     <header class="header">
         <div class="container">
             <div id="header" class="header_top">
@@ -39,14 +39,9 @@
         <div><a href="order.html" style="text-decoration: underline">Вернуться к оформлению заказа</a></div>
         </div>
     <div class="order_column">
-        <div><h2>№ Заказа</h2><p>данные из бд</p></div>
-        <div><h2>Состав заказа</h2><p>данные из бд</p></div>
-        <div><h2>Адрес доставки</h2><p>данные из бд</p></div>
-        <div><h2>Дата и время доставки</h2><p>данные из бд</p></div>
-        <div><h2>Пожелания клиента</h2><p>данные из бд</p></div>
-        <div><h2>Стоимость</h2><p>данные из бд</p></div>
     </div>
     <div class="a2"><a href="payment.html" class="btn_next">Оплатить</a></div>
     </div>
+    
 </body>
 </html>
